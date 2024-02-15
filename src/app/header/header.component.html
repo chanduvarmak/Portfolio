@@ -1,0 +1,13 @@
+<header class="header">
+    <div class="logo">Chandu Varma K</div>
+    <nav class="navigation">
+        <ul>
+            <li [class.active]="activeSection === 'about'"><a (click)="setActiveSection('about')"
+                    href="#about">About</a></li>
+            <li [class.active]="activeSection === 'portfolio'"><a (click)="setActiveSection('portfolio')"
+                    href="#portfolio">Portfolio</a></li>
+            <li [class.active]="activeSection === 'contact'"><a (click)="setActiveSection('contact')"
+                    href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
