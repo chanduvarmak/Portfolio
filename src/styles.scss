@@ -18,6 +18,60 @@
   .container p {
     font-size: 18px;
   }
-  h1, h2, h3, h4, h5, h6,li,ul,p{
-    font-family: 'Poppins', sans-serif !important; 
+  h1, h2, h3, h4, h5, h6,li,ul,p,a{
+    font-family: 'Poppins', sans-serif !important;
+    color: #3F4254;
   } 
+
+  // this below code is for responsive about section
+
+  // @media (max-width: 767px) {
+  //   .container {
+  //     padding: 0 10px; /* Adjust container padding */
+  //   }
+    
+  //   .profile {
+  //     flex-direction: column; /* Stack profile info on top of the profile picture */
+  //     text-align: center; /* Center align profile info */
+  //   }
+    
+  //   .profile-picture {
+  //     margin-right: 0; /* Remove right margin for profile picture */
+  //     margin-bottom: 20px; /* Add bottom margin for separation */
+  //   }
+    
+  //   .profile-info {
+  //     max-width: none; /* Remove max-width for profile info */
+  //     left: auto; /* Reset left position */
+  //   }
+    
+  //   .navigation ul {
+  //     flex-direction: column; /* Stack navigation links vertically */
+  //     align-items: center; /* Center align navigation links */
+  //   }
+    
+  //   .navigation ul li {
+  //     margin: 10px 0; /* Adjust margin for navigation links */
+  //   }
+  // }
+
+  @media screen and (max-width: 768px) {
+    .profile {
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-info {
+      max-width: 100%; /* Occupy full width */
+      margin-top: 20px; /* Add some space between profile picture and profile info */
+    }
+  }
+  
+  /* Adjustments for even smaller screens */
+  @media screen and (max-width: 480px) {
+    .profile-info {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+    .alphabet-pattern {
+      display: none; /* Hide alphabet pattern for smaller screens */
+    }
+  }
