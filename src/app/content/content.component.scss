@@ -1,22 +1,52 @@
-.big-letter {
-    font-size: 150px;
-    color: #007bff; /* your color choice */
-    margin-bottom: 30px;
+#about {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 80px 0; /* Adjust padding as needed */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-picture {
+  width: 200px; /* Adjust size as needed */
+  border-radius: 50%; /* Make the image circular */
+  margin-right: 40px; /* Adjust margin as needed */
+}
+
+.profile-info {
+  max-width: 600px; /* Adjust width as needed */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px black;
+  background-color: #fff;
+}
+
+.profile-info h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Animation for profile picture */
+.profile-picture {
+  animation: floatAnimation 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0% {
+      transform: translateY(0);
   }
-  
-  .big-letter span {
-    position: relative;
-    animation: moveX 2s infinite alternate;
+  100% {
+      transform: translateY(-10px); /* Adjust as needed */
   }
-  
-  @keyframes moveX {
-    from {
-      transform: translateX(-20px);
-    }
-    to {
-      transform: translateX(20px);
-    }
-  }
+}
 
 //portfolio
 
@@ -88,15 +118,20 @@
   .contact-form {
     max-width: 400px;
     margin: 0 auto;
+    padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px black;
+  background-color: #fff;
   }
   
   .contact-form input,
   .contact-form textarea {
-    width: 100%;
+    width: 95%;
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 3px;
   }
   
   .contact-form button {
@@ -114,7 +149,21 @@
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
-  
+  .additional-content p{
+    margin-top: 30px;
+  }
+  .social-media-links {
+    margin-top: 20px;
+}
+
+.social-media-links a {
+    margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.social-media-links img {
+    width: 30px; /* Adjust icon size */
+    height: auto;
+}
 // footer
   .footer {
     background-color: #f8f9fa;
