@@ -53,6 +53,8 @@
 .portfolio{
     display: flex;
     margin-top: 30px;
+    background-color: #f8f9fa; /* Light background color */
+  padding: 80px 0;
 }
   .project-card {
     width: 250px;
@@ -74,19 +76,26 @@
     margin-bottom: 10px;
   }
 
-.skills-list {
+  .skills-list {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allow skills to wrap to next line if needed */
   }
   
   .skills-list li {
-    background-color: #f8f9fa;
+    background-color: #fff;
     color: #333;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin: 0 10px 10px 0; /* Adjust margin as needed */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .skills-list li:hover {
+    transform: translateY(-5px); /* Move the skill card up slightly on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
   }
   
   .github-link {
@@ -116,9 +125,9 @@
 // contact
 
   .contact-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px black;
   background-color: #fff;
@@ -139,6 +148,7 @@
     color: #fff;
     border: none;
     padding: 10px 20px;
+    margin-top: 3px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -164,6 +174,10 @@
     width: 30px; /* Adjust icon size */
     height: auto;
 }
+.text-danger{
+  color: tomato;
+}
+
 // footer
   .footer {
     background-color: #f8f9fa;
@@ -175,4 +189,3 @@
     margin: 0;
     font-size: 14px;
   }
-  

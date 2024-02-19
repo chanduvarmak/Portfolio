@@ -2,7 +2,7 @@
     <div class="container">
         <h2>About Me</h2>
         <div class="profile">
-            <img src="assets/portfolio.jpg" alt="Profile Picture" class="profile-picture">
+            <img src="assets/developer.png" alt="Profile Picture" class="profile-picture">
             <div class="profile-info">
                 <h3>Hello, I'm Chandu Varma K</h3>
                 <p>I'm a passionate Angular frontend developer with a keen eye for user-centric design and a knack for
@@ -23,14 +23,7 @@
         <h2>Portfolio</h2>
         <h1>Skills</h1>
         <ul class="skills-list">
-            <li>Angular</li>
-            <li>Type Script</li>
-            <li>Node.js</li>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>Java Script</li>
-            <li>Reactive forms</li>
-            <!-- Add more skills as needed -->
+            <li *ngFor="let skill of skills">{{ skill }}</li>
         </ul>
         <div class="github-link">
             <h3>Check out my GitHub</h3>
@@ -61,18 +54,27 @@
 <section id="contact" class="section">
     <div class="container">
         <h2>Contact Me</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <input type="text" placeholder="Name" formControlName="name">
+            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+                Name is required
+            </div>
+            <input type="email" placeholder="Email" formControlName="email">
+            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+                Please enter a valid email address
+            </div>
+            <textarea placeholder="Message" formControlName="message"></textarea>
+            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+                Please enter a message..!
+            </div>
             <button type="submit">Send Message</button>
         </form>
         <div class="additional-content">
             <p>Feel free to reach out to me for any inquiries or questions.</p>
         </div>
         <div class="social-media-links">
-            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><img src="assets/linkedin.png"
-                    alt="LinkedIn"></a>
+            <a href="https://www.linkedin.com/in/chandu-varma-k-765933214" target="_blank"><img
+                    src="assets/linkedin.png" alt="LinkedIn"></a>
             <a href="https://www.instagram.com/your-instagram" target="_blank"><img src="assets/instagram.png"
                     alt="Instagram"></a>
             <a href="https://twitter.com/your-twitter" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
