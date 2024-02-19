@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PortfolioBackend.Controllers
@@ -7,5 +7,6 @@ namespace PortfolioBackend.Controllers
   [ApiController]
   public class FormController : ControllerBase
   {
+
   }
 }

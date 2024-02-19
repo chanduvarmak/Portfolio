@@ -1,14 +1,18 @@
-using PortfolioBackend.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System.IO;
+using PortfolioBackend.Models;
 
-namespace PortfolioBackend.DbContext
+namespace PortfolioBackend.Models
 {
   public class AppDbContext : IdentityDbContext
   {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    { }
-    public DbSet<FormSubmission> Form ubmission { get; set; }
+    public DbSet<FormSubmission> FormSubmissions { get; set; }
+
+    //protected override void OnModelCreating(ModelBuilder modelBuilder)
+    //{
+    //  base.OnModelCreating(modelBuilder);
+    //}
   }
 }
