@@ -35,6 +35,43 @@
   line-height: 1.6;
   margin-bottom: 15px;
 }
+
+/* Add this CSS for the button animation */
+.download-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for button animation */
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animation to the button */
+.download-button:hover {
+  animation: pulseAnimation 0.5s infinite;
+}
+
 .profile-picture {
   animation: floatAnimation 3s ease-in-out infinite alternate;
 }

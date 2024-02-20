@@ -46,4 +46,15 @@ export class ContentComponent {
       }
     });
   }
+
+  downloadResume() {
+    // Replace 'resume.pdf' with the actual path to your resume file
+    const resumeUrl = 'assets/resume.pdf';
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Chandu_Varma_Resume.pdf'; // Specify the filename for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 }
