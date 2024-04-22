@@ -27,13 +27,13 @@ export class ContentComponent {
     },
     {
       image: "assets/browser.png",
-      title: "Credepress",
+      title: "Credexpress",
       description: "Currently, I'm deeply involved in Credepress, a hospital management system. My role primarily revolves around creating and refining various screens as per the specific requirements of the healthcare domain. Additionally, I'm actively engaged in setting up DevOps processes to streamline development and deployment pipelines."
     },
     {
       image: "assets/search-bar.png",
       title: "Personal GitHub Projects",
-      description: "Apart from my professional engagements, I consistently upskill myself through personal projects hosted on my GitHub. These projects span various domains and technologies, showcasing my continuous learning journey. Some notable projects include <Project 1>, <Project 2>, and <Project 3>."
+      description: "Apart from my professional engagements, I consistently upskill myself through personal projects hosted on my GitHub. These projects span various domains and technologies, showcasing my continuous learning journey. Some notable projects include 'Responsive Landing page using react', 'HRMS Using only Angular', and 'Some basic angular pages using basic concepts of angular'."
     }
   ];
   contactForm: FormGroup;
